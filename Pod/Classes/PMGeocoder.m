@@ -56,7 +56,6 @@ typedef NSUInteger PMGeocoderState;
 
 - (void)dealloc {
     [_operationConnection cancel];
-    [super dealloc];
 }
 
 #pragma mark - Convenience Initializers
