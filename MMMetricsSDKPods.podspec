@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "MMMetricsSDKPods"
-  s.version          = "0.9.4"
+  s.version          = "0.9.5"
   s.summary          = "Just a cocoapod covering the MetricsSDK"
 #  s.description      =
   s.homepage         = "https://github.com/brbulic/MMMetricsSDKPods"

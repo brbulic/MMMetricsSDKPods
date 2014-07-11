@@ -7,14 +7,7 @@ NSString *const kPMReachabilityChangedNotification = @"kPMReachabilityChangedNot
 
 @property (nonatomic, assign) SCNetworkReachabilityRef  reachabilityRef;
 
-
-#if NEEDS_DISPATCH_RETAIN_RELEASE
 @property (nonatomic, assign) dispatch_queue_t          reachabilitySerialQueue;
-#else
-@property (nonatomic, strong) dispatch_queue_t          reachabilitySerialQueue;
-#endif
-
-
 @property (nonatomic, strong) id reachabilityObject;
 
 -(void)reachabilityChanged:(SCNetworkReachabilityFlags)flags;
@@ -43,8 +36,7 @@ static NSString *reachabilityFlags(SCNetworkReachabilityFlags flags)
 // Start listening for reachability notifications on the current run loop
 static void TMReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReachabilityFlags flags, void* info) 
 {
-#pragma unused (target)
-    PMReachabilityWrapper *reachability = ((PMReachabilityWrapper*)info);
+    PMReachabilityWrapper *reachability = ((__bridge PMReachabilityWrapper*)info);
     
     // We probably don't need an autoreleasepool here, as GCD docs state each queue has its own autorelease pool,
     // but what the heck eh?
