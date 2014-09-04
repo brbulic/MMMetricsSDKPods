@@ -9,9 +9,8 @@
 
 Pod::Spec.new do |s|
   s.name             = "MMMetricsSDKPods"
-  s.version          = "0.9.5"
+  s.version          = "0.9.6"
   s.summary          = "Just a cocoapod covering the MetricsSDK"
-#  s.description      =
   s.homepage         = "https://github.com/brbulic/MMMetricsSDKPods"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
@@ -23,9 +22,4 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes'
-# s.resources = 'Pod/Assets/*.png'
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

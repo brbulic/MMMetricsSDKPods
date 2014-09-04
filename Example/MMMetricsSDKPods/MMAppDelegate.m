@@ -7,11 +7,14 @@
 //
 
 #import "MMAppDelegate.h"
+#import <MMMetricsSDKPods/MMCustomLogger.h>
 
 @implementation MMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    MMLogError(@"Jebicu");
+    
     // Override point for customization after application launch.
     return YES;
 }
