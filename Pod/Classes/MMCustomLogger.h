@@ -10,8 +10,8 @@
 
 typedef NS_ENUM(NSUInteger, MMCustomLoggerVerbosity) {
     Error = 0,
-    Debug = 1,
-    Info = 2,
+    Info = 1,
+    Debug = 2,
     Verbose = 3,
 };
 
